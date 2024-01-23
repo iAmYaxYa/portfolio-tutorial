@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Portfolio</title>
+    <!-- CSS LINK  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- BOX ICONS CDN LINK -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Animate On Scroll Library CSS Link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="container">
+        <div class="nav">
+          <!-- logo -->
+          <a class="logo" href="/">
+            <img src="../images/logo.png" alt="logo-img" class="logo-img" />
+          </a>
+          <!-- links  -->
+          <ul class="links">
+            <li>
+              <a href="#" class="nav-link">home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link">about</a>
+            </li>
+            <li>
+              <a href="#services" class="nav-link">services</a>
+            </li>
+            <li>
+              <a href="#projects" class="nav-link">projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link">contact</a>
+            </li>
+          </ul>
+          <!-- toggles  -->
+          <div class="toggles">
+            <!-- toggle nav links -->
+            <button class="toggle-links">
+              <i class="bx bx-menu"></i>
+            </button>
+            <!-- toggle contact -->
+            <button class="toggle-contact-right-bar">
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT RIGHT BAR  -->
+    <div class="contact-right-bar">
+      <div class="contact-header">
+        <!-- small logo -->
+        <a class="small-logo" href="/">
+          <img
+            src="../images/logo.png"
+            alt="small-logo-img"
+            class="small-logo-img"
+          />
+        </a>
+        <button class="circle-btn close-contact">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <div class="contact-body">
+        <div class="top">
+          <h4 class="contact-title">about us</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            molestias unde odio tempore consequuntur vero ex labore
+            necessitatibus blanditiis pariatur.
+          </p>
+        </div>
+        <div class="bottom">
+          <h4 class="contact-title">GET IN TOUCH</h4>
+          <!-- contact right bar form  -->
+          <form>
+            <div class="input-group">
+              <input
+                type="text"
+                required
+                placeholder="Your Name"
+                class="input-contact"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                required
+                placeholder="Your Email"
+                class="input-contact"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                required
+                placeholder="Message"
+                class="message-contact"
+              ></textarea>
+            </div>
+            <div class="input-group">
+              <button type="submit" class="btn">Submit Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- BANNER  -->
+    <section id="banner" class="banner">
+      <div class="container">
+        <div class="row">
+          <!-- left column -->
+          <div class="text-col">
+            <h1 class="banner-heading">
+              HI, I'M ZYAN! CREATIVE
+              <span>CODER</span>
+            </h1>
+            <p>
+              I'm a passionate UI/UX designer with a mission to create
+              delightful and intuitive digital experiences. With a strong
+              foundation in design principles and a keen eye for detail, I
+              specialize in translating complex ideas into user-friendly
+              interfaces that captivate and engage.
+            </p>
+            <div class="btn-container">
+              <button class="btn download-btn flex items-center">
+                Download CV <i class="bx bxs-download"></i>
+              </button>
+              <div class="play-btn">
+                <button class="circle-btn">
+                  <i class="bx bx-play"></i>
+                </button>
+                <span>Watch The Video</span>
+              </div>
+            </div>
+          </div>
+          <!-- right column  -->
+          <div class="img-col">
+            <div class="img">
+              <img src="./images/banner_img_1.png" class="banner-img" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <!-- left column  -->
+          <div class="col-2">
+            <!-- title and subtitle  -->
+            <h3 class="section-title">ABOUT ME</h3>
+            <h5 class="section-subtitle-left" data-aos="fade-up">
+              Transforming visions into exceptional portfolios
+            </h5>
+            <div class="my-20">
+              <div class="flex gap-20">
+                <div class="line my-10"></div>
+                <div>
+                  <p>
+                    Nemo design enim ipsam voluptatem quim voluptas sit
+                    aspernatur aut odit auting fugit sed thisnquia consequuntur
+                    magni dolores eos designer heresm qui ratione
+                  </p>
+                  <div class="my-40">
+                    <button class="btn download-btn flex items-center gap-10">
+                      Download CV <i class="bx bxs-download"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right column  -->
+          <div class="col-2 text-right-lg-left" data-aos="fade-left">
+            <img
+              src="./images/about_img.jpg"
+              class="about-img"
+              alt="about-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title text-center">my services</h3>
+        <h5 class="section-subtitle-center" data-aos="fade-up">
+          Crafting stories through design and innovation
+        </h5>
+        <!-- services list -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-3" data-aos="fade-right">
+            <div class="service-icon"><i class="bx bx-code-alt"></i></div>
+            <div class="card">
+              <h4 class="card-title">WEBSITE DESIGN</h4>
+              <p class="text-center">
+                Nemo design enim ipsam voluptatem quim voluptas sit
+                aspernaturaut odit auting fugit sed thisnquia consequuntur magni
+                doloreseos designer heresm qui
+              </p>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-3" data-aos="fade-up">
+            <div class="service-icon"><i class="bx bxl-sketch"></i></div>
+            <div class="card">
+              <h4 class="card-title">logo design</h4>
+              <p class="text-center">
+                Nemo design enim ipsam voluptatem quim voluptas sit
+                aspernaturaut odit auting fugit sed thisnquia consequuntur magni
+                doloreseos designer heresm qui
+              </p>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-3" data-aos="fade-left">
+            <div class="service-icon"><i class="bx bxl-codepen"></i></div>
+            <div class="card">
+              <h4 class="card-title">APPS DEVELOPMENT</h4>
+              <p class="text-center">
+                Nemo design enim ipsam voluptatem quim voluptas sit
+                aspernaturaut odit auting fugit sed thisnquia consequuntur magni
+                doloreseos designer heresm qui
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EDUCATION AND SKILLS -->
+    <section class="education-skill">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title text-center">education & skill</h3>
+        <h5 class="section-subtitle-center" data-aos="fade-up">
+          Showcasing your talent amplifying your impact
+        </h5>
+        <!-- education list -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="education">
+              <button class="btn-outline">2014 - 2018</button>
+              <h2>WordPress and Front End Developer</h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit sed thisnquia consequuntur magni dolores eos qui
+                ratione voluptatem
+              </p>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="education">
+              <button class="btn-outline">2012 - 2014</button>
+              <h2>PHP Developer</h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit sed thisnquia consequuntur magni dolores eos qui
+                ratione voluptatem
+              </p>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="education">
+              <button class="btn-outline">2005 - 2009</button>
+              <h2>Kent State University</h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit sed thisnquia consequuntur magni dolores eos qui
+                ratione voluptatem
+              </p>
+            </div>
+          </div>
+          <!-- column 4 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="education">
+              <button class="btn-outline">2009 - 20012</button>
+              <h2>User Experience Design</h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit sed thisnquia consequuntur magni dolores eos qui
+                ratione voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- skills list -->
+        <div class="row mt-20">
+          <!-- column 1 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">HTML</h6>
+              <div class="skill-progress w-90"></div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">PHP</h6>
+              <div class="skill-progress w-70"></div>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">CSS</h6>
+              <div class="skill-progress w-80"></div>
+            </div>
+          </div>
+          <!-- column 4 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">PhotoShop</h6>
+              <div class="skill-progress w-60"></div>
+            </div>
+          </div>
+          <!-- column 5 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">Javascript</h6>
+              <div class="skill-progress w-100"></div>
+            </div>
+          </div>
+          <!-- column 6 -->
+          <div class="col-2" data-aos="fade-up">
+            <div class="skill">
+              <h6 class="skill-text">Figma</h6>
+              <div class="skill-progress w-80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title">MY RECENT PORTFOLIO</h3>
+        <h5 class="section-subtitle-left" data-aos="fade-right">
+          Elevate your brand to new heights with our portfolio expertise
+        </h5>
+        <!-- projects list -->
+        <div class="flex justify-between flex-wrap my-50 gap-20">
+          <!-- column 1 -->
+          <div class="col-3xl" data-aos="fade-right">
+            <div class="project">
+              <img
+                src="./images/project-1.jpg"
+                class="project-img"
+                alt="project-img"
+              />
+              <div class="overlay">
+                <div>
+                  <h2>Sheet Metal Bending</h2>
+                  <div class="flex items-center gap-20">
+                    <div class="line-green"></div>
+                    <p>Youtube</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-1sm" data-aos="fade-left">
+            <div class="project">
+              <img
+                src="./images/project-2.jpg"
+                class="project-img"
+                alt="project-img"
+              />
+              <div class="overlay">
+                <div>
+                  <h2>Sheet Metal Bending</h2>
+                  <div class="flex items-center gap-20">
+                    <div class="line-green"></div>
+                    <p>Vimeo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-2sm" data-aos="fade-right">
+            <div class="project">
+              <img
+                src="./images/project-5.png"
+                class="project-img"
+                alt="project-img"
+              />
+              <div class="overlay">
+                <div>
+                  <h2>Sheet Metal Bending</h2>
+                  <div class="flex items-center gap-20">
+                    <div class="line-green"></div>
+                    <p>SoundCloud</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 4 -->
+          <div class="col-2sm" data-aos="fade-left">
+            <div class="project">
+              <img
+                src="./images/project-4.jpg"
+                class="project-img"
+                alt="project-img"
+              />
+              <div class="overlay">
+                <div>
+                  <h2>Sheet Metal Bending</h2>
+                  <div class="flex items-center gap-20">
+                    <div class="line-green"></div>
+                    <p>Image</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section class="testimonial">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title text-center">clients review</h3>
+        <h5 class="section-subtitle-center" data-aos="fade-up">
+          My Testimonial
+        </h5>
+        <!-- testimonial list -->
+        <div class="row my-50">
+          <!-- column 1 -->
+          <div class="col-2" data-aos="fade-right">
+            <div class="client">
+              <!-- image profile -->
+              <div class="client-img">
+                <img src="./images/T-1.jpg" alt="" />
+              </div>
+              <div class="client-info">
+                <div class="flex items-center client-stars gap-10">
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                </div>
+                <h2>Amin Van Burin</h2>
+                <p class="uppercase">content manager</p>
+                <div class="flex">
+                  <p class="my-20">
+                    Beautiful minimalist design and great, fast response with
+                    support. Highly recommend. Thanks Marketify!
+                  </p>
+                  <div class="client-quota">
+                    <i class="bx bxs-quote-alt-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2" data-aos="fade-left">
+            <div class="client">
+              <!-- image profile -->
+              <div class="client-img">
+                <img src="./images/T-2.jpg" alt="" />
+              </div>
+              <div class="client-info">
+                <div class="flex items-center client-stars gap-10">
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star fs-20"></i>
+                  <i class="bx bxs-star-half fs-20"></i>
+                </div>
+                <h2>Alexander Walker</h2>
+                <p class="uppercase">graphic designer</p>
+                <div class="flex">
+                  <p class="my-20">
+                    Beautiful minimalist design and great, fast response with
+                    support. Highly recommend. Thanks Marketify!
+                  </p>
+                  <div class="client-quota">
+                    <i class="bx bxs-quote-alt-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT  -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="flex flex-wrap justify-between">
+          <!-- column 1 -->
+          <div class="col-2">
+            <!-- title and subtitle  -->
+            <h3 class="section-title">contact me</h3>
+            <h5 class="section-subtitle-left" data-aos="fade-up">
+              Design and Innovation
+            </h5>
+            <div class="my-40">
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                auting fugit sed thisnquia consequuntur magni dolores eos
+                designer heresm qui ratione voluptatem sequi nesciuNeque porro
+                quisquam est, oursqui dolorem ipsum quia dolor sit amet
+                consectetur, adipisci velit, sed quia non numquam
+              </p>
+            </div>
+            <div class="row">
+              <!-- column 1  -->
+              <div class="col-2" data-aos="fade-right">
+                <div class="contact-card flex flex-col items-center gap-20">
+                  <div class="contact-card-icon">
+                    <i class="bx bx-git-pull-request"></i>
+                  </div>
+                  <div class="numbers">10k+</div>
+                  <p>Complete Project</p>
+                </div>
+              </div>
+              <!-- column 2  -->
+              <div class="col-2" data-aos="fade-right">
+                <div class="contact-card flex flex-col items-center gap-20">
+                  <div class="contact-card-icon">
+                    <i class="bx bx-user"></i>
+                  </div>
+                  <div class="numbers">800+</div>
+                  <p>Client Review</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2" data-aos="fade-left">
+            <div class="contact-form">
+              <h2>GET TOUCH ME?</h2>
+              <p class="my-20">
+                For your car we will do everything advice design in us repairs
+                and maintenance We are the some preferred.
+              </p>
+              <form>
+                <div class="input-group">
+                  <input type="text" required placeholder="Your Name" />
+                </div>
+                <div class="input-group">
+                  <input type="email" required placeholder="Your Email" />
+                </div>
+                <div class="input-group">
+                  <input type="number" required placeholder="Your Phone" />
+                </div>
+                <div class="input-group">
+                  <textarea required placeholder="Message"></textarea>
+                </div>
+                <div class="input-group">
+                  <button type="submit" class="btn">Submit Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEWS LETTER -->
+    <div class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2 class="text-center" data-aos="fade-up">
+            SUBSCRIBE MY NEWSLETTER
+          </h2>
+          <div class="newsletter-form" data-aos="fade-up">
+            <form>
+              <input type="email" required placeholder="Enter Your Email" />
+              <button type="submit" class="btn">Notify Me</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer class="footer">
+      <div class="container">
+        <!-- footer top  -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-3" data-aos="fade-right">
+            <div class="flex gap-20">
+              <!-- icon  -->
+              <div class="footer-icon">
+                <i class="bx bx-location-plus"></i>
+              </div>
+              <!-- text  -->
+              <div>
+                <h4 class="footer-title">Address</h4>
+                <p class="my-20">
+                  2118 Thornridge Cir. Syracuse, Connecticut 35624
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-3" data-aos="fade-up">
+            <div class="flex gap-20">
+              <!-- icon -->
+              <div class="footer-icon">
+                <i class="bx bx-phone-call"></i>
+              </div>
+              <!-- text  -->
+              <div>
+                <h4 class="footer-title">Lets talk us</h4>
+                <div class="my-20">
+                  <p class="primary-hover">(802) 777-0123</p>
+                  <p class="primary-hover">(802) 777-0124</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-3" data-aos="fade-left">
+            <div class="flex gap-20">
+              <!-- icon  -->
+              <div class="footer-icon">
+                <i class="bx bx-envelope"></i>
+              </div>
+              <!-- text  -->
+              <div>
+                <h4 class="footer-title">Send us email</h4>
+                <div class="my-20">
+                  <p class="primary-hover">mobilecode@example.com</p>
+                  <p class="primary-hover">mobilecode@dev.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- line break  -->
+        <hr class="my-20 border-gray" />
+        <!-- footer bottom  -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-2">
+            <p>&#169; Mobile Code 2024 | All Rights Reserved</p>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2">
+            <div class="row">
+              <p class="primary-hover">Trams & Condition</p>
+              <p class="primary-hover">Privacy Policy</p>
+              <p class="primary-hover">Sitemap</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- CONTACT OVERLAY  -->
+    <div class="contact-overlay fade"></div>
+    <!-- LOADING -->
+    <div class="loading">
+      <div class="loader"></div>
+    </div>
+    <!-- Animate On Scroll Library JS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- local js link  -->
+    <script src="index.js"></script>
+  </body>
+</html>

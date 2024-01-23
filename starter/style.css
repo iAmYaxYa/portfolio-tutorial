@@ -1,0 +1,427 @@
+/* FONT FAMILY LINK  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+/* CSS VARIABLES  */
+:root {
+    --primaryColor: #55e6a5;
+    --bodyBg: #02050a;
+    --bgColor: #09101a;
+    --grayColor: #191e25;
+    --bodyColor: #a2a2a2;
+    --colorWhite: #fff;
+    --colorBlack: #02050a;
+}
+
+/* ALL ELEMENTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============================= DEFAULT STYLES ============================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bodyBg);
+    overflow-x: hidden;
+}
+
+/* SCROLL BAR DESIGN */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bodyBg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--grayColor);
+    border-radius: 10px;
+}
+
+/* OTHER CLASSES AND ELEMENTS  */
+/* CONTAINERS  */
+section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.container {
+    width: 82%;
+    margin: auto;
+}
+
+/* TYPOGRAPHY */
+h2 {
+    font-size: 23px;
+    margin: 20px 0;
+    letter-spacing: 0.8px;
+    color: var(--colorWhite);
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primaryColor);
+}
+
+.section-subtitle-left {
+    font-size: 38px;
+    letter-spacing: 0.8px;
+    color: var(--colorWhite);
+}
+
+.section-subtitle-center {
+    font-size: 38px;
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: var(--colorWhite);
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--bodyColor);
+}
+
+/* SPACING  */
+.m-5 {
+    margin: 5px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.my-5 {
+    margin: 5px 0;
+}
+
+.my-10 {
+    margin: 10px 0;
+}
+
+.my-20 {
+    margin: 20px 0;
+}
+
+.my-30 {
+    margin: 30px 0;
+}
+
+.my-40 {
+    margin: 40px 0;
+}
+
+.my-50 {
+    margin: 50px 0;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+/* SIZING  */
+.w-10 {
+    width: 10%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-65 {
+    width: 65%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+/* UTILITIES */
+.border-gray {
+    border: 1px solid var(--grayColor);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-right-lg-left {
+    text-align: right;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.line {
+    height: 2px;
+    background: var(--bodyColor);
+    width: 300px;
+}
+
+.primary-hover {
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.primary-hover:hover {
+    color: var(--primaryColor);
+}
+
+/* FORM */
+
+input,
+textarea {
+    width: 100%;
+    background: none;
+    border: 1px solid var(--primaryColor);
+    padding: 22px 20px;
+    color: var(--colorWhite);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+.input-group {
+    margin-top: 30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    padding: 20px 30px;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--grayColor);
+    color: var(--colorWhite);
+}
+
+.btn-outline {
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.circle-btn {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: var(--primaryColor);
+}
+
+/* LAYOUTS  */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+.col-2 {
+    flex-basis: 47%;
+    margin: 1.5%;
+}
+
+.col-2sm {
+    flex-basis: 48%;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    margin: 1.6%;
+}
+
+.col-3xl {
+    flex-basis: 60%;
+}
+
+.col-1sm {
+    flex-basis: 38%;
+}
+
+
+
+
+/* ============================= @MEDIA QUERY | RESPONSIVE STYLE ============================= */
+
+@media (max-width: 1115px) {
+
+    /* CUSTOM CLASSES RESPONSIVE  */
+    .col-3xl {
+        flex-basis: 48%;
+    }
+
+    .col-1sm {
+        flex-basis: 48%;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    /* CUSTOM CLASSES RESPONSIVE  */
+    .container {
+        width: 90%;
+    }
+
+    .col-3 {
+        flex-basis: 45%;
+        margin: 0 1.5%;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        margin: 20px 0;
+    }
+
+    .section-subtitle-center {
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
+    .section-subtitle-left {
+        margin-bottom: 50px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .text-right-lg-left {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* CUSTOM CLASSES RESPONSIVE  */
+    .col-3 {
+        flex-basis: 100%;
+        margin: 20px 0 !important;
+    }
+
+    .col-2sm,
+    .col-3xl,
+    .col-1sm {
+        flex-basis: 100%;
+    }
+
+
+    .section-subtitle-center {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .section-subtitle-left {
+        font-size: 25px;
+    }
+}
