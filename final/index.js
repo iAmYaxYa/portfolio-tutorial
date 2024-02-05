@@ -16,19 +16,21 @@ navLinks.forEach((link) => {
   link.addEventListener("click", toggleNav);
 });
 // open contact right bar
-toggleContactRightBarMenu.addEventListener("click", () => {
-  contactRightBar.classList.toggle("show-contact");
-  contactOverlay.classList.toggle("show");
-});
-// close contact right bar
-closeContact.addEventListener("click", () => {
-  contactRightBar.classList.toggle("show-contact");
-  contactOverlay.classList.toggle("show");
-});
+toggleContactRightBarMenu.addEventListener("click", toggleContact);
+// close contact right bar in close btn
+closeContact.addEventListener("click", toggleContact);
+// close contact right bar in overlay
+contactOverlay.addEventListener("click", toggleContact);
 
+// toggle navbar
 function toggleNav() {
   navLinkElement.classList.toggle("show-links");
   toggleLinksMenu.children[0].classList.toggle("bx-x");
+}
+// toggle contact right bar
+function toggleContact() {
+  contactRightBar.classList.toggle("show-contact");
+  contactOverlay.classList.toggle("show");
 }
 
 // loading

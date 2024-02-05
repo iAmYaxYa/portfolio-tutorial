@@ -497,20 +497,20 @@ textarea {
     top: 0;
     overflow-y: hidden;
     height: 100vh;
-    width: 100%;
     width: 400px;
-    height: 100vh;
     padding-bottom: 100px;
     background: var(--bgColor);
     border-left: 1px solid rgba(0, 0, 0, 0.175);
     visibility: hidden;
+    pointer-events: none;
     transform: translateX(100%);
-    transition: transform .3s ease-in-out;
+    transition: transform, visibility, .3s ease-in-out;
     z-index: 9;
 }
 
 .contact-right-bar.show-contact {
     visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
 }
 
