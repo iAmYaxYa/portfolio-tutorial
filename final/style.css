@@ -350,17 +350,18 @@ textarea {
 /* ============================= LOADER STYLE ============================= */
 .loading {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
-    left: 0;
     top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     background-color: var(--bgColor);
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(0);
-    transition: transform .5s ease-out;
-    z-index: 99999;
+    pointer-events: auto;
+    transition: transform .5s ease-in-out;
+    z-index: 9999;
 }
 
 .loading.hide {
@@ -370,19 +371,19 @@ textarea {
 
 .loading .loader {
     display: inline-block;
-    width: 80px;
     height: 80px;
+    width: 80px;
 }
 
-.loading .loader:after {
-    content: " ";
+.loading .loader::after {
+    content: ' ';
     display: block;
     width: 64px;
     height: 64px;
-    margin: 8px;
     border-radius: 50%;
     border: 6px solid var(--primaryColor);
     border-color: var(--primaryColor) transparent var(--primaryColor) transparent;
+    margin: 8px;
     animation: spinnerLoader 1.2s linear infinite;
 }
 
@@ -396,21 +397,21 @@ textarea {
     }
 }
 
-/* ============================= NAVBAR STYLE ============================= */
+/* ====================================== NAVBAR STYLES ====================================== */
 .navbar {
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100vw;
     z-index: 5;
 }
 
 .nav {
-    background: var(--grayColor);
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    background-color: var(--grayColor);
 }
 
 .logo {
@@ -422,62 +423,63 @@ textarea {
     height: 100%;
 }
 
-.nav .links {
+.links {
     display: flex;
     align-items: center;
 }
 
-.nav .links li {
+.links li {
     list-style: none;
 }
 
-.nav .links li .nav-link {
+.links li .nav-link {
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
     padding: 0 20px;
     color: var(--colorWhite);
-    font-weight: 500;
-    font-size: 14px;
     text-transform: uppercase;
     line-height: 12px;
     letter-spacing: 1px;
     transition: color .4s ease-in-out;
 }
 
-.nav .links li .nav-link:hover {
+.links li .nav-link:hover {
     color: var(--primaryColor);
 }
 
-.nav .toggles button {
+.toggles button {
     height: 80px;
     width: 80px;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
     cursor: pointer;
-    background: var(--primaryColor);
+    background-color: var(--primaryColor);
 }
 
-.nav .toggles button i {
+.toggles button i {
     font-size: 40px;
 }
 
-.nav .toggles .toggle-links {
+button.toggle-links {
     display: none;
 }
 
-.nav .toggles .toggle-contact-right-bar {
+button.toggle-contact-right-bar {
     display: block;
 }
 
-/* ============================= CONTACT RIGHT BAR STYLE ============================= */
+
+/* ====================================== CONTACT RIGHT BAR STYLES ====================================== */
 .contact-overlay {
-    background: var(--colorBlack);
     position: fixed;
-    right: 0;
+    left: 0;
     top: 0;
-    min-height: 100vh;
-    width: 100%;
+    right: 0;
+    bottom: 0;
+    background: var(--colorBlack);
     z-index: 8;
 }
 
@@ -495,17 +497,17 @@ textarea {
     position: fixed;
     right: 0;
     top: 0;
-    overflow-y: hidden;
     height: 100vh;
     width: 400px;
+    overflow-y: hidden;
     padding-bottom: 100px;
-    background: var(--bgColor);
+    background-color: var(--bgColor);
     border-left: 1px solid rgba(0, 0, 0, 0.175);
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateX(100%);
-    transition: transform, visibility, .3s ease-in-out;
     z-index: 9;
+    visibility: hidden;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: transform, visibility, .4s ease-in-out;
 }
 
 .contact-right-bar.show-contact {
@@ -519,8 +521,8 @@ textarea {
     align-items: center;
     justify-content: space-between;
     height: 100px;
-    padding: 40px 20px;
     width: 100%;
+    padding: 40px 20px;
     background-color: #141c27;
 }
 
@@ -537,7 +539,7 @@ textarea {
 }
 
 .contact-right-bar .contact-header .close-contact:hover {
-    background: var(--bodyBg);
+    background-color: var(--bgColor);
 }
 
 .contact-right-bar .contact-header .close-contact i {
@@ -555,10 +557,6 @@ textarea {
     overflow-y: auto;
 }
 
-.contact-right-bar .contact-body .bottom {
-    margin-top: 50px;
-}
-
 .contact-right-bar .contact-title {
     font-size: 20px;
     margin: 20px 0;
@@ -568,36 +566,34 @@ textarea {
 }
 
 /* ============================= BANNER STYLE ============================= */
-
 .banner {
+    background: url('images/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
     padding-top: 120px;
     padding-bottom: 50px;
-    background: url('/images/banner-bg.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .banner .banner-heading {
-    color: var(--colorWhite);
     font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
     word-break: normal;
     margin: 30px 0;
+    color: var(--colorWhite);
 }
 
 .banner .banner-heading span {
     color: var(--primaryColor);
-    transition: all .3s ease-in-out;
 }
 
 .banner .btn-container {
-    margin-top: 70px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 70px;
 }
 
 .banner .btn-container .download-btn i {
@@ -611,19 +607,19 @@ textarea {
     gap: 10px;
 }
 
+.banner .btn-container .play-btn i {
+    font-size: 40px;
+}
+
 .banner .btn-container .play-btn span {
     color: var(--colorWhite);
     font-size: 18px;
-    transition: .3s ease-in-out;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
 }
 
 .banner .btn-container .play-btn span:hover {
     color: var(--primaryColor);
-    cursor: pointer;
-}
-
-.banner .btn-container .play-btn i {
-    font-size: 40px;
 }
 
 .banner .row .text-col {
@@ -636,16 +632,21 @@ textarea {
 
 .banner .row .img-col .img {
     text-align: right;
-
 }
 
-.banner .banner-img {
-    height: 450px;
-    padding: 25px;
+.banner .row .img-col .img .banner-img {
+    width: 450px;
+    padding: 20px;
+}
+
+/* ============================= ABOUT STYLES ============================= */
+.about-img {
+    height: 500px;
+    border-top: 20px solid var(--primaryColor);
+    border-right: 20px solid var(--primaryColor);
 }
 
 /* ============================= SERVICES STYLES ============================= */
-
 .services .col-3 {
     position: relative;
     margin-top: 80px;
@@ -668,20 +669,13 @@ textarea {
     padding: 40px 20px;
 }
 
-.services .card-title {
+.services .card .card-title {
     font-size: 20px;
     margin: 20px 0;
+    letter-spacing: .8px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
     color: var(--colorWhite);
     text-align: center;
-}
-
-/* ============================= ABOUT STYLES ============================= */
-.about-img {
-    height: 500px;
-    border-top: 20px solid var(--primaryColor);
-    border-right: 20px solid var(--primaryColor);
 }
 
 /* ============================= EDUCATION & SKILL STYLES ============================= */
@@ -690,14 +684,14 @@ textarea {
 }
 
 .skill {
-    background: var(--grayColor);
+    background-color: var(--grayColor);
 }
 
 .skill-text {
-    color: var(--colorWhite);
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 0.8px;
+    color: var(--colorWhite);
+    letter-spacing: .8px;
     padding: 20px;
 }
 
@@ -708,8 +702,8 @@ textarea {
 
 /* ============================= PROJECTS STYLES ============================= */
 .project {
-    position: relative;
     cursor: pointer;
+    position: relative;
     overflow: hidden;
 }
 
@@ -721,10 +715,10 @@ textarea {
 
 .project .overlay {
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(3, 3, 3));
     display: flex;
     align-items: end;
@@ -769,16 +763,15 @@ textarea {
 }
 
 .client h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.client .client-quota {
+.client .client-quote {
     margin-left: 5px;
     padding-top: 15px;
 }
 
-
-.client .client-quota i {
+.client .client-quote i {
     font-size: 45px;
     color: var(--primaryColor);
 }
@@ -786,19 +779,23 @@ textarea {
 /* ============================= CONTACT STYLES ============================= */
 .contact-form,
 .contact-card {
+    background-color: var(--bgColor);
     padding: 30px;
-    background: var(--bgColor);
+}
+
+.contact-form h2 {
+    text-transform: uppercase;
 }
 
 .contact-card .contact-card-icon i {
-    color: var(--primaryColor);
     font-size: 45px;
+    color: var(--primaryColor);
 }
 
 .contact-card .numbers {
     font-size: 40px;
-    color: var(--colorWhite);
     font-weight: 600;
+    color: var(--colorWhite);
 }
 
 .contact-card p {
@@ -807,10 +804,10 @@ textarea {
 
 /* ============================= NEWSLETTER STYLES ============================= */
 .newsletter {
-    height: 500px !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./images/newsletter.jpg');
-    background-position: center;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('images/newsletter.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -823,10 +820,10 @@ textarea {
 }
 
 .newsletter-content .newsletter-form {
-    width: 50%;
-    margin: 0 auto;
-    border: 1px solid var(--primaryColor);
     padding: 10px;
+    border: 1px solid var(--primaryColor);
+    margin: 0 auto;
+    width: 50%;
     position: relative;
 }
 
@@ -836,8 +833,8 @@ textarea {
 
 .newsletter-content .newsletter-form button {
     position: absolute;
-    top: 10px;
     right: 10px;
+    top: 10px;
 }
 
 /* ============================= FOOTER STYLES ============================= */
@@ -846,24 +843,24 @@ textarea {
     padding-bottom: 30px;
 }
 
-.footer-title {
+.footer .footer-title {
     font-size: 20px;
     color: var(--colorWhite);
-    letter-spacing: 0.8px;
+    letter-spacing: .8px;
 }
 
-.footer-icon {
+.footer .footer-icon {
     height: 75px;
     width: 75px;
-    padding: 20px;
-    background-color: var(--primaryColor);
     border-radius: 50%;
+    background-color: var(--primaryColor);
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer-icon i {
+.footer .footer-icon i {
     font-size: 40px;
 }
 
@@ -934,47 +931,43 @@ textarea {
         position: absolute;
         right: 0;
         top: 50px;
-        width: 200px;
-        height: 100vh;
         flex-direction: column;
-        background: var(--bgColor);
-        gap: 20px;
+        background-color: var(--bgColor);
         padding-top: 60px;
+        gap: 20px;
+        height: 100vh;
+        width: 200px;
         transform: translateX(100%);
-        transition: transform .3s ease-in-out;
+        transition: transform .4s ease-in-out;
     }
 
     .nav .links.show-links {
         transform: translateX(0);
     }
 
-    .nav .toggles button {
-        height: 50px;
+    .toggles button {
         width: 50px;
+        height: 50px;
     }
 
-    .nav .toggles .toggle-links {
+    button.toggle-links {
         display: block;
     }
 
-    .nav .toggles .toggle-contact-right-bar {
+    button.toggle-contact-right-bar {
         display: none;
     }
 
     /* CONTACT RIGHT BAR RESPONSIVE */
+    .contact-overlay,
     .contact-right-bar {
         display: none;
-    }
-
-    .contact-right-bar.show-contact {
-        transform: translateX(100%);
     }
 
     /* BANNER RESPONSIVE */
     .banner .banner-heading {
         font-size: 55px;
     }
-
 
 }
 
@@ -1002,12 +995,12 @@ textarea {
         font-size: 25px;
     }
 
-    /* NAVBAR RESPONSIVE  */
+    /* NAVBAR RESPONSIVE */
     .nav .links {
         width: 100%;
     }
 
-    /* BANNER RESPONSIVE  */
+    /* BANNER RESPONSIVE */
     .banner {
         padding-top: 100px;
     }
@@ -1016,24 +1009,19 @@ textarea {
         font-size: 40px;
     }
 
-    /* ABOUT RESPONSIVE  */
+    /* ABOUT RESPONSIVE */
     .about-img {
         height: 400px;
         width: 100%;
         object-fit: cover;
     }
 
-    /* PROJECT RESPONSIVE  */
+    /* PROJECT RESPONSIVE */
     .project .project-img {
         height: 400px;
     }
 
-    /* TESTIMONIAL RESPONSIVE  */
-    .client .client-quota {
-        display: none;
-    }
-
-    /* NEWSLETTER RESPONSIVE  */
+    /* NEWS LETTER RESPONSIVE */
     .newsletter-content .newsletter-form {
         width: 100%;
     }

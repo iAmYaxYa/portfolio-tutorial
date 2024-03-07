@@ -1,44 +1,40 @@
 const toggleLinksMenu = document.querySelector(".nav .toggle-links"),
-  navLinkElement = document.querySelector(".nav .links"),
-  toggleContactRightBarMenu = document.querySelector(
-    ".nav .toggle-contact-right-bar"
-  ),
+  navLinksElement = document.querySelector(".nav .links"),
   navLinks = document.querySelectorAll(".nav .links .nav-link"),
+  toggleContactMenu = document.querySelector(".nav .toggle-contact-right-bar"),
   contactRightBar = document.querySelector(".contact-right-bar"),
-  closeContact = document.querySelector(".contact-right-bar .close-contact"),
+  closeContactRightBarBtn = document.querySelector(
+    ".contact-right-bar .close-contact"
+  ),
   contactOverlay = document.querySelector(".contact-overlay"),
   loading = document.querySelector(".loading");
 
-// toggle nav links
+//   toggle nav links
 toggleLinksMenu.addEventListener("click", toggleNav);
-// navLinks
+// nav links
 navLinks.forEach((link) => {
   link.addEventListener("click", toggleNav);
 });
-// open contact right bar
-toggleContactRightBarMenu.addEventListener("click", toggleContact);
-// close contact right bar in close btn
-closeContact.addEventListener("click", toggleContact);
-// close contact right bar in overlay
-contactOverlay.addEventListener("click", toggleContact);
-
-// toggle navbar
 function toggleNav() {
-  navLinkElement.classList.toggle("show-links");
+  navLinksElement.classList.toggle("show-links");
   toggleLinksMenu.children[0].classList.toggle("bx-x");
 }
-// toggle contact right bar
+// open contactRightBar
+toggleContactMenu.addEventListener("click", toggleContact);
+// close contactRightBar in btn
+closeContactRightBarBtn.addEventListener("click", toggleContact);
+// close contactRightBar in overlay
+contactOverlay.addEventListener("click", toggleContact);
+
 function toggleContact() {
   contactRightBar.classList.toggle("show-contact");
   contactOverlay.classList.toggle("show");
 }
-
 // loading
 window.addEventListener("load", () => {
   setTimeout(() => {
     loading.classList.toggle("hide");
   }, 1000);
 });
-
 // initialize AOS library
 AOS.init();
